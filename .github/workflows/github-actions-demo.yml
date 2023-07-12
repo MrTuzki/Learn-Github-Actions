@@ -15,4 +15,9 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: README
+          path: README.md
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      
